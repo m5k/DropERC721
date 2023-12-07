@@ -30,7 +30,6 @@ interface IERC165Upgradeable {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721Upgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -188,7 +187,6 @@ interface IERC721Upgradeable is IERC165Upgradeable {
     ) external view returns (bool);
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/extensions/IERC721MetadataUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -217,7 +215,6 @@ interface IERC721MetadataUpgradeable is IERC721Upgradeable {
     function tokenURI(uint256 tokenId) external view returns (string memory);
 }
 
-
 // File contracts/lib/contracts/lib/ERC721A-Upgradeable/contracts/IERC721AUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -225,7 +222,6 @@ interface IERC721MetadataUpgradeable is IERC721Upgradeable {
 // Creator: Chiru Labs
 
 pragma solidity ^0.8.4;
-
 
 /**
  * @dev Interface of an ERC721A compliant contract.
@@ -330,7 +326,6 @@ interface IERC721AUpgradeable is
      */
     function totalSupply() external view returns (uint256);
 }
-
 
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol
 
@@ -558,7 +553,6 @@ library AddressUpgradeable {
     }
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -703,7 +697,6 @@ abstract contract Initializable {
     }
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -733,7 +726,6 @@ interface IERC721ReceiverUpgradeable {
         bytes calldata data
     ) external returns (bytes4);
 }
-
 
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol
 
@@ -773,14 +765,12 @@ abstract contract ContextUpgradeable is Initializable {
     uint256[50] private __gap;
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)
 
 pragma solidity ^0.8.0;
-
 
 /**
  * @dev Implementation of the {IERC165} interface.
@@ -817,7 +807,6 @@ abstract contract ERC165Upgradeable is Initializable, IERC165Upgradeable {
      */
     uint256[50] private __gap;
 }
-
 
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol
 
@@ -900,7 +889,6 @@ library StringsUpgradeable {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/eip/ERC721AVirtualApproveUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -910,12 +898,6 @@ library StringsUpgradeable {
 ////////// CHANGELOG: turn `approve` to virtual //////////
 
 pragma solidity ^0.8.4;
-
-
-
-
-
-
 
 /**
  * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
@@ -1576,7 +1558,6 @@ contract ERC721AUpgradeable is
     uint256[42] private __gap;
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IContractMetadata.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -1604,7 +1585,6 @@ interface IContractMetadata {
     /// @dev Emitted when the contract URI is updated.
     event ContractURIUpdated(string prevURI, string newURI);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/ContractMetadata.sol
 
@@ -1652,7 +1632,6 @@ abstract contract ContractMetadata is IContractMetadata {
     function _canSetContractURI() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IDelayedReveal.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -1694,7 +1673,6 @@ interface IDelayedReveal {
         bytes calldata key
     ) external pure returns (bytes memory result);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/DelayedReveal.sol
 
@@ -1813,7 +1791,6 @@ abstract contract DelayedReveal is IDelayedReveal {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IClaimCondition.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -1865,7 +1842,6 @@ interface IClaimCondition {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IClaimConditionMultiPhase.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -1905,7 +1881,6 @@ interface IClaimConditionMultiPhase is IClaimCondition {
         mapping(uint256 => mapping(address => uint256)) supplyClaimedByWallet;
     }
 }
-
 
 // File contracts/lib/contracts/contracts/extension/interface/IDrop.sol
 
@@ -1986,7 +1961,6 @@ interface IDrop is IClaimConditionMultiPhase {
     ) external;
 }
 
-
 // File contracts/lib/contracts/contracts/lib/MerkleProof.sol
 
 // Original license: SPDX_License_Identifier: Apache
@@ -2043,14 +2017,12 @@ library MerkleProof {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/Drop.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 
 /// @author thirdweb
-
 
 abstract contract Drop is IDrop {
     /*///////////////////////////////////////////////////////////////
@@ -2358,7 +2330,6 @@ abstract contract Drop is IDrop {
     function _canSetClaimConditions() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/extension/BatchMintMetadata.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -2455,7 +2426,6 @@ contract BatchMintMetadata {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/ILazyMint.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -2497,14 +2467,12 @@ interface ILazyMint {
     ) external returns (uint256 batchId);
 }
 
-
 // File contracts/lib/contracts/contracts/extension/LazyMint.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 
 /// @author thirdweb
-
 
 /**
  *  The `LazyMint` is a contract extension for any base NFT contract. It lets you 'lazy mint' any number of NFTs
@@ -2560,7 +2528,6 @@ abstract contract LazyMint is ILazyMint, BatchMintMetadata {
     function _canLazyMint() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IOwnable.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -2584,7 +2551,6 @@ interface IOwnable {
     /// @dev Emitted when a new Owner is set.
     event OwnerUpdated(address indexed prevOwner, address indexed newOwner);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/Ownable.sol
 
@@ -2641,7 +2607,6 @@ abstract contract Ownable is IOwnable {
     /// @dev Returns whether owner can be set in the given execution context.
     function _canSetOwner() internal view virtual returns (bool);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/interface/IPermissions.sol
 
@@ -2749,7 +2714,6 @@ interface IPermissions {
     function renounceRole(bytes32 role, address account) external;
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IPermissionsEnumerable.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -2784,7 +2748,6 @@ interface IPermissionsEnumerable is IPermissions {
      */
     function getRoleMemberCount(bytes32 role) external view returns (uint256);
 }
-
 
 // File contracts/lib/contracts/contracts/lib/TWStrings.sol
 
@@ -2859,14 +2822,12 @@ library TWStrings {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/Permissions.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 
 /// @author thirdweb
-
 
 /**
  *  @title   Permissions
@@ -3043,14 +3004,12 @@ contract Permissions is IPermissions {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/PermissionsEnumerable.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 
 /// @author thirdweb
-
 
 /**
  *  @title   PermissionsEnumerable
@@ -3164,7 +3123,6 @@ contract PermissionsEnumerable is IPermissionsEnumerable, Permissions {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IPlatformFee.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -3206,7 +3164,6 @@ interface IPlatformFee {
     /// @dev Emitted when the platform fee type is updated.
     event PlatformFeeTypeUpdated(PlatformFeeType feeType);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/PlatformFee.sol
 
@@ -3333,7 +3290,6 @@ abstract contract PlatformFee is IPlatformFee {
     function _canSetPlatformFeeInfo() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/extension/interface/IPrimarySale.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -3357,7 +3313,6 @@ interface IPrimarySale {
     /// @dev Emitted when a new sale recipient is set.
     event PrimarySaleRecipientUpdated(address indexed recipient);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/PrimarySale.sol
 
@@ -3407,7 +3362,6 @@ abstract contract PrimarySale is IPrimarySale {
     function _canSetPrimarySaleRecipient() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/eip/interface/IERC165.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -3436,7 +3390,6 @@ interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/eip/interface/IERC2981.sol
 
 // Original license: SPDX_License_Identifier: Apache
@@ -3460,7 +3413,6 @@ interface IERC2981 is IERC165 {
         uint256 salePrice
     ) external view returns (address receiver, uint256 royaltyAmount);
 }
-
 
 // File contracts/lib/contracts/contracts/extension/interface/IRoyalty.sol
 
@@ -3517,7 +3469,6 @@ interface IRoyalty is IERC2981 {
         uint256 royaltyBps
     );
 }
-
 
 // File contracts/lib/contracts/contracts/extension/Royalty.sol
 
@@ -3675,14 +3626,12 @@ abstract contract Royalty is IRoyalty {
     function _canSetRoyaltyInfo() internal view virtual returns (bool);
 }
 
-
 // File contracts/lib/contracts/contracts/external-deps/openzeppelin/metatx/ERC2771ContextUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
 // OpenZeppelin Contracts v4.4.0 (metatx/ERC2771Context.sol)
 
 pragma solidity ^0.8.11;
-
 
 /**
  * @dev Context variant with ERC2771 support.
@@ -3748,7 +3697,6 @@ abstract contract ERC2771ContextUpgradeable is
     uint256[49] private __gap;
 }
 
-
 // File contracts/lib/contracts/contracts/eip/interface/IERC20.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -3786,7 +3734,6 @@ interface IERC20 {
         uint256 value
     );
 }
-
 
 // File contracts/lib/contracts/contracts/lib/TWAddress.sol
 
@@ -4049,14 +3996,12 @@ library TWAddress {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/external-deps/openzeppelin/token/ERC20/utils/SafeERC20.sol
 
 // Original license: SPDX_License_Identifier: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/utils/SafeERC20.sol)
 
 pragma solidity ^0.8.0;
-
 
 /**
  * @title SafeERC20
@@ -4178,7 +4123,6 @@ library SafeERC20 {
     }
 }
 
-
 // File contracts/lib/contracts/contracts/infra/interface/IWETH.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -4191,7 +4135,6 @@ interface IWETH {
 
     function transfer(address to, uint256 value) external returns (bool);
 }
-
 
 // File contracts/lib/contracts/contracts/lib/CurrencyTransferLib.sol
 
@@ -4306,7 +4249,6 @@ library CurrencyTransferLib {
     }
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC2981Upgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -4333,14 +4275,12 @@ interface IERC2981Upgradeable is IERC165Upgradeable {
     ) external view returns (address receiver, uint256 royaltyAmount);
 }
 
-
 // File contracts/lib/contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/MulticallUpgradeable.sol
 
 // Original license: SPDX_License_Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (utils/Multicall.sol)
 
 pragma solidity ^0.8.0;
-
 
 /**
  * @dev Provides a function to batch together multiple calls in a single external call.
@@ -4397,7 +4337,6 @@ abstract contract MulticallUpgradeable is Initializable {
      */
     uint256[50] private __gap;
 }
-
 
 // File contracts/lib/operator-filter-registry/src/IOperatorFilterRegistry.sol
 
@@ -4596,7 +4535,6 @@ interface IOperatorFilterRegistry {
     function codeHashOf(address addr) external returns (bytes32);
 }
 
-
 // File contracts/lib/operator-filter-registry/src/UpdatableOperatorFilterer.sol
 
 // Original license: SPDX_License_Identifier: MIT
@@ -4712,7 +4650,6 @@ abstract contract UpdatableOperatorFilterer {
     }
 }
 
-
 // File contracts/Launchpad.sol
 
 // Original license: SPDX_License_Identifier: Apache-2.0
@@ -4731,20 +4668,9 @@ pragma solidity ^0.8.11;
 
 //  ==========  External imports    ==========
 
-
-
 //  ==========  Internal imports    ==========
 
-
 //  ==========  Features    ==========
-
-
-
-
-
-
-
-
 
 // OpenSea operator filter
 
@@ -4767,7 +4693,7 @@ contract DropERC721 is
 
     /*///////////////////////////////////////////////////////////////
                             State variables
-    //////////////////////////////////////////////////////////////*/
+    ///////////////////////////////////////////////////////////////*/
 
     /// @dev Only transfers to or from TRANSFER_ROLE holders are valid, when transfers are restricted.
     bytes32 private transferRole;
